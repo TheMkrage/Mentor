@@ -1,5 +1,5 @@
 //
-//  HeaderView.swift
+//  BottomPane.swift
 //  Mentor
 //
 //  Created by Matthew Krager on 2/23/19.
@@ -9,10 +9,11 @@
 import UIKit
 import Anchorage
 
-class HeaderView: UIView {
-    
-    var titleLabel = HeaderLabel()
+class BottomPane: UIView {
 
+    var titleLabel = HeaderLabel()
+    var learnMoreButton = LearnMoreButton()
+    
     init() {
         super.init(frame: CGRect.zero)
         setup()
@@ -24,9 +25,11 @@ class HeaderView: UIView {
     }
     
     func setup() {
+        backgroundColor = .fg
         addSubview(titleLabel)
+        addSubview(learnMoreButton)
         
-        titleLabel.centerYAnchor == centerYAnchor
-        titleLabel.leadingAnchor == leadingAnchor + 20
+        titleLabel.topAnchor == topAnchor + 20
+        titleLabel.leadingAnchor == leadingAnchor + 30
     }
 }

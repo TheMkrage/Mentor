@@ -14,6 +14,10 @@
 		7E4D2A782221E4EE0025ECD7 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4D2A772221E4EE0025ECD7 /* UIColor+Extensions.swift */; };
 		7E8B9C122221E8CC00FF407E /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8B9C112221E8CC00FF407E /* HeaderView.swift */; };
 		7E8B9C162221E93000FF407E /* HeaderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8B9C152221E93000FF407E /* HeaderLabel.swift */; };
+		7E8B9C1B2221EAF000FF407E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E8B9C1A2221EAD700FF407E /* Main.storyboard */; };
+		7E8B9C1D2221F3AB00FF407E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7E8B9C1C2221F3AB00FF407E /* GoogleService-Info.plist */; };
+		7E8B9C212222038A00FF407E /* BottomPane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8B9C202222038A00FF407E /* BottomPane.swift */; };
+		7E8B9C23222203EF00FF407E /* LearnMoreButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8B9C22222203EF00FF407E /* LearnMoreButton.swift */; };
 		B66C097C8997E3F34363CA97 /* Pods_Mentor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C376E116AABCFF4DA97C239 /* Pods_Mentor.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +33,10 @@
 		7E4D2A772221E4EE0025ECD7 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		7E8B9C112221E8CC00FF407E /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		7E8B9C152221E93000FF407E /* HeaderLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderLabel.swift; sourceTree = "<group>"; };
+		7E8B9C192221EAD700FF407E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ../Mentor/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7E8B9C1C2221F3AB00FF407E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7E8B9C202222038A00FF407E /* BottomPane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomPane.swift; sourceTree = "<group>"; };
+		7E8B9C22222203EF00FF407E /* LearnMoreButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnMoreButton.swift; sourceTree = "<group>"; };
 		BD5D65DC9C6F11D4417A6091 /* Pods-Mentor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mentor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mentor/Pods-Mentor.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,7 +87,9 @@
 				7E8B9C132221E8D300FF407E /* Views */,
 				7E8B9C142221E8DC00FF407E /* Extension */,
 				7E4D2A6C2221DBC30025ECD7 /* Assets.xcassets */,
+				7E8B9C1A2221EAD700FF407E /* Main.storyboard */,
 				7E4D2A6E2221DBC30025ECD7 /* LaunchScreen.storyboard */,
+				7E8B9C1C2221F3AB00FF407E /* GoogleService-Info.plist */,
 				7E4D2A712221DBC30025ECD7 /* Info.plist */,
 			);
 			path = Mentor;
@@ -88,8 +98,8 @@
 		7E8B9C132221E8D300FF407E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				7E8B9C112221E8CC00FF407E /* HeaderView.swift */,
-				7E8B9C152221E93000FF407E /* HeaderLabel.swift */,
+				7E8B9C1F2222037C00FF407E /* BottomPane */,
+				7E8B9C1E2222037500FF407E /* Header */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -100,6 +110,24 @@
 				7E4D2A772221E4EE0025ECD7 /* UIColor+Extensions.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		7E8B9C1E2222037500FF407E /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				7E8B9C112221E8CC00FF407E /* HeaderView.swift */,
+				7E8B9C152221E93000FF407E /* HeaderLabel.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		7E8B9C1F2222037C00FF407E /* BottomPane */ = {
+			isa = PBXGroup;
+			children = (
+				7E8B9C202222038A00FF407E /* BottomPane.swift */,
+				7E8B9C22222203EF00FF407E /* LearnMoreButton.swift */,
+			);
+			path = BottomPane;
 			sourceTree = "<group>";
 		};
 		C5A89EB8E9A47C6610825D99 /* Frameworks */ = {
@@ -170,6 +198,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E8B9C1B2221EAF000FF407E /* Main.storyboard in Resources */,
+				7E8B9C1D2221F3AB00FF407E /* GoogleService-Info.plist in Resources */,
 				7E4D2A702221DBC30025ECD7 /* LaunchScreen.storyboard in Resources */,
 				7E4D2A6D2221DBC30025ECD7 /* Assets.xcassets in Resources */,
 			);
@@ -188,6 +218,7 @@
 				"${BUILT_PRODUCTS_DIR}/Anchorage/Anchorage.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Highlightr/Highlightr.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -195,6 +226,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Anchorage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Highlightr.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,11 +259,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E8B9C212222038A00FF407E /* BottomPane.swift in Sources */,
 				7E4D2A682221DBC10025ECD7 /* ViewController.swift in Sources */,
 				7E4D2A782221E4EE0025ECD7 /* UIColor+Extensions.swift in Sources */,
 				7E8B9C162221E93000FF407E /* HeaderLabel.swift in Sources */,
 				7E4D2A662221DBC10025ECD7 /* AppDelegate.swift in Sources */,
 				7E8B9C122221E8CC00FF407E /* HeaderView.swift in Sources */,
+				7E8B9C23222203EF00FF407E /* LearnMoreButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,6 +278,14 @@
 				7E4D2A6F2221DBC30025ECD7 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		7E8B9C1A2221EAD700FF407E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7E8B9C192221EAD700FF407E /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

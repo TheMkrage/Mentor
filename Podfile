@@ -9,6 +9,7 @@ target 'Mentor' do
 
   # Pods for Mentor
   pod 'Firebase/Core'
+  pod 'Firebase/Database'
   pod 'Highlightr'
   pod 'Anchorage'
 end
