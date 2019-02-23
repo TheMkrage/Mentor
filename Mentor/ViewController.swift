@@ -37,9 +37,8 @@ class ViewController: UIViewController {
         return t
     }()
     
-    var bottomPane: UIView = {
-        let v = UIView()
-        v.backgroundColor = .fg
+    var bottomPane: BottomPane = {
+        let v = BottomPane()
         return v
     }()
     
@@ -95,7 +94,7 @@ class ViewController: UIViewController {
             self.view.layoutIfNeeded()
             
             UIView.animate(withDuration: Double(0.5), animations: {
-                self.bottomPaneHeight?.constant = 200.0
+                self.bottomPaneHeight?.constant = 350.0
                 self.view.layoutIfNeeded()
             })
         }

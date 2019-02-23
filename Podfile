@@ -12,4 +12,5 @@ target 'Mentor' do
   pod 'Firebase/Database'
   pod 'Highlightr'
   pod 'Anchorage'
+  pod 'DragDropiOS'
 end

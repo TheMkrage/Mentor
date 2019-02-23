@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "43B710988749A5473B1BA003F9A64846"
-               BlueprintName = "Pods-Mentor"
+               BlueprintIdentifier = "9F86C014E1AFACA37F73B577F39D8998"
+               BlueprintName = "DragDropiOS"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "Pods-Mentor.framework">
+               BuildableName = "DragDropiOS.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

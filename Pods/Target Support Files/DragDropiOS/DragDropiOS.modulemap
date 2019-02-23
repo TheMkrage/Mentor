@@ -1,0 +1,6 @@
+framework module DragDropiOS {
+  umbrella header "DragDropiOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -18,6 +18,7 @@
 		7E8B9C1D2221F3AB00FF407E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7E8B9C1C2221F3AB00FF407E /* GoogleService-Info.plist */; };
 		7E8B9C212222038A00FF407E /* BottomPane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8B9C202222038A00FF407E /* BottomPane.swift */; };
 		7E8B9C23222203EF00FF407E /* LearnMoreButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8B9C22222203EF00FF407E /* LearnMoreButton.swift */; };
+		7E8B9C252222075500FF407E /* DraggableCodeSnippit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8B9C242222075500FF407E /* DraggableCodeSnippit.swift */; };
 		B66C097C8997E3F34363CA97 /* Pods_Mentor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C376E116AABCFF4DA97C239 /* Pods_Mentor.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		7E8B9C1C2221F3AB00FF407E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7E8B9C202222038A00FF407E /* BottomPane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomPane.swift; sourceTree = "<group>"; };
 		7E8B9C22222203EF00FF407E /* LearnMoreButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnMoreButton.swift; sourceTree = "<group>"; };
+		7E8B9C242222075500FF407E /* DraggableCodeSnippit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraggableCodeSnippit.swift; sourceTree = "<group>"; };
 		BD5D65DC9C6F11D4417A6091 /* Pods-Mentor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mentor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mentor/Pods-Mentor.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,6 +128,7 @@
 			children = (
 				7E8B9C202222038A00FF407E /* BottomPane.swift */,
 				7E8B9C22222203EF00FF407E /* LearnMoreButton.swift */,
+				7E8B9C242222075500FF407E /* DraggableCodeSnippit.swift */,
 			);
 			path = BottomPane;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Mentor/Pods-Mentor-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Anchorage/Anchorage.framework",
+				"${BUILT_PRODUCTS_DIR}/DragDropiOS/DragDropiOS.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Highlightr/Highlightr.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -224,6 +228,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Anchorage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DragDropiOS.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Highlightr.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -259,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E8B9C252222075500FF407E /* DraggableCodeSnippit.swift in Sources */,
 				7E8B9C212222038A00FF407E /* BottomPane.swift in Sources */,
 				7E4D2A682221DBC10025ECD7 /* ViewController.swift in Sources */,
 				7E4D2A782221E4EE0025ECD7 /* UIColor+Extensions.swift in Sources */,

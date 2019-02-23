@@ -10,12 +10,28 @@ import UIKit
 
 class LearnMoreButton: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    init() {
+        super.init(frame: CGRect.zero)
+        setup()
     }
-    */
-
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(frame: CGRect.zero)
+        setup()
+    }
+    
+    func setup() {
+        backgroundColor = .clear
+    }
+    
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
+        let path = UIBezierPath()
+        
+        let center = CGPoint(x: rect.width/2, y: 293)
+        path.move(to: center)
+        path.addArc(withCenter: center, radius: 293.0/2, startAngle: 0.0, endAngle: CGFloat.pi/2.0, clockwise: true)
+        path.close()
+        path.fill()
+    }
 }

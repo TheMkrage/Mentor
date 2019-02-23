@@ -1,5 +1,6 @@
 PODS:
   - Anchorage (4.3)
+  - DragDropiOS (0.2.5)
   - Firebase/Core (5.15.0):
     - Firebase/CoreOnly
     - FirebaseAnalytics (= 5.4.0)
@@ -62,6 +63,7 @@ PODS:
 
 DEPENDENCIES:
   - Anchorage
+  - DragDropiOS
   - Firebase/Core
   - Firebase/Database
   - Highlightr
@@ -69,6 +71,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Anchorage
+    - DragDropiOS
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuthInterop
@@ -83,6 +86,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Anchorage: 21a98675245188427f0bcea21404d42a824a766f
+  DragDropiOS: 8b3a687578eff7be5891f1214799726b45397cb7
   Firebase: 8bb9268bff82374f2cbaaabb143e725743c316ae
   FirebaseAnalytics: c06f9d70577d79074214700a71fd5d39de5550fb
   FirebaseAuthInterop: 0ffa57668be100582bb7643d4fcb7615496c41fc
@@ -95,6 +99,6 @@ SPEC CHECKSUMS:
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
 
-PODFILE CHECKSUM: 6984b75fe5370cda28c627b11f5f4cd498e69e87
+PODFILE CHECKSUM: ebe0e376589c877d71eaf6dd0827836d04bfbd03
 
 COCOAPODS: 1.5.2
