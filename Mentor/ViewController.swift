@@ -30,10 +30,11 @@ class ViewController: UIViewController {
     // View
     let headerView = HeaderView()
     
-    var textView: UITextView = {
-        let t = UITextView()
+    var textView: CLTypingLabel = {
+        let t = CLTypingLabel()
         t.backgroundColor = .clear
-        t.textContainerInset = .zero
+        t.numberOfLines = 0
+        //t.textContainerInset = .zero
         return t
     }()
     
@@ -58,6 +59,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor.bg
         
+        print(diff("I am Krager and I love pizza", "I ma Krager dna I evol pizza"))
+        
         ref.root.observe(.value) { (snap) in
             let dict = snap.value as? [String : AnyObject]
             if let options = dict?["options"] as? [String] {
@@ -66,7 +69,8 @@ class ViewController: UIViewController {
             if let code = dict?["code"] as? String  {
                 self.determineState(code: code)
                 let highlightedCode = self.highlightr.highlight(code)
-                self.textView.attributedText = highlightedCode
+                self.textView.attributedText = highlightedCode!
+                
             }
         }
         
@@ -111,7 +115,7 @@ class ViewController: UIViewController {
         
         textView.topAnchor == headerView.bottomAnchor + 30
         textView.horizontalAnchors == view.horizontalAnchors + 25
-        textView.bottomAnchor == view.bottomAnchor
+        textView.bottomAnchor <= bottomPane.topAnchor + 30
         
         bottomPane.bottomAnchor == view.bottomAnchor
         bottomPane.leadingAnchor == view.leadingAnchor

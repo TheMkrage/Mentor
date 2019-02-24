@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9DA452D210F4721C609F989AAD274836"
-               BlueprintName = "Pods-Mentor"
+               BlueprintIdentifier = "B881263F5FBF1212B32FA2AABEFFB1CD"
+               BlueprintName = "Dwifft"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "Pods-Mentor.framework">
+               BuildableName = "Dwifft.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
