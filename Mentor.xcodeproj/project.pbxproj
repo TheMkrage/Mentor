@@ -20,7 +20,6 @@
 		7E8B9C23222203EF00FF407E /* LearnMoreButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8B9C22222203EF00FF407E /* LearnMoreButton.swift */; };
 		7E8B9C252222075500FF407E /* DraggableCodeSnippit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8B9C242222075500FF407E /* DraggableCodeSnippit.swift */; };
 		7E8B9C272222435100FF407E /* CLTypingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8B9C262222435100FF407E /* CLTypingLabel.swift */; };
-		7E8B9C29222245E400FF407E /* Diff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8B9C28222245E400FF407E /* Diff.swift */; };
 		B66C097C8997E3F34363CA97 /* Pods_Mentor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C376E116AABCFF4DA97C239 /* Pods_Mentor.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,7 +41,6 @@
 		7E8B9C22222203EF00FF407E /* LearnMoreButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnMoreButton.swift; sourceTree = "<group>"; };
 		7E8B9C242222075500FF407E /* DraggableCodeSnippit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraggableCodeSnippit.swift; sourceTree = "<group>"; };
 		7E8B9C262222435100FF407E /* CLTypingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLTypingLabel.swift; sourceTree = "<group>"; };
-		7E8B9C28222245E400FF407E /* Diff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diff.swift; sourceTree = "<group>"; };
 		BD5D65DC9C6F11D4417A6091 /* Pods-Mentor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mentor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mentor/Pods-Mentor.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,7 +113,6 @@
 			isa = PBXGroup;
 			children = (
 				7E4D2A772221E4EE0025ECD7 /* UIColor+Extensions.swift */,
-				7E8B9C28222245E400FF407E /* Diff.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -224,6 +221,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Mentor/Pods-Mentor-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Anchorage/Anchorage.framework",
 				"${BUILT_PRODUCTS_DIR}/DragDropiOS/DragDropiOS.framework",
 				"${BUILT_PRODUCTS_DIR}/Dwifft/Dwifft.framework",
@@ -234,6 +232,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Anchorage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DragDropiOS.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Dwifft.framework",
@@ -278,7 +277,6 @@
 				7E4D2A682221DBC10025ECD7 /* ViewController.swift in Sources */,
 				7E4D2A782221E4EE0025ECD7 /* UIColor+Extensions.swift in Sources */,
 				7E8B9C162221E93000FF407E /* HeaderLabel.swift in Sources */,
-				7E8B9C29222245E400FF407E /* Diff.swift in Sources */,
 				7E4D2A662221DBC10025ECD7 /* AppDelegate.swift in Sources */,
 				7E8B9C122221E8CC00FF407E /* HeaderView.swift in Sources */,
 				7E8B9C23222203EF00FF407E /* LearnMoreButton.swift in Sources */,

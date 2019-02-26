@@ -25,6 +25,7 @@
 //
 
 import UIKit
+import Dwifft
 
 /*
  Set text at runtime to trigger type animation;
@@ -41,7 +42,7 @@ import UIKit
     /*
      Set interval time between each characters
      */
-    @IBInspectable open var charInterval: Double = 0.015
+    @IBInspectable open var charInterval: Double = 0.005
     
     /*
      If text is always centered during typing
@@ -95,9 +96,11 @@ import UIKit
             typingOver = false
             stoppedSubstring = nil
             
-            
+            let diffs = Dwifft.diff(Array(super.attributedText?.string ?? ""), Array(newValue.string)).sorted(by: { (dif1, dif2) -> Bool in
+                return dif1.idx < dif2.idx
+            })
             attributes = newValue.attributes(at: 0, effectiveRange: nil)
-            setTextWithTypingAnimation(newValue)
+            setTextWithTypingAnimation(newValue, diffs: diffs)
             //setTextWithTypingAnimation(newValue.string, attributes, charInterval, true, currentDispatchID, attributedString: newValue)
         }
     }
@@ -135,15 +138,62 @@ import UIKit
     
     // MARK: -
     // MARK: Set Text Typing Recursive Loop
-    private func setTextWithTypingAnimation(_ attributedString: NSAttributedString, length: Int = 1) {
-        if length == attributedString.length {
+    private func setTextWithTypingAnimation(_ attributedString: NSAttributedString, length: Int = 1, diffs: [DiffStep<Character>]) {
+        if diffs.count == 0 {
             return
         }
+        let diff = diffs.first!
+        //print(diff.debugDescription)
         DispatchQueue.main.async {
-            super.attributedText = attributedString.attributedSubstring(from: NSRange(location: 0, length: length))
-        }
-        self.dispatchSerialQ.asyncAfter(deadline: .now() + charInterval) { [weak self] in
-            self?.setTextWithTypingAnimation(attributedString, length: length + 1)
+            if diff.debugDescription.first! == "+" {
+                let beforeAdd = super.attributedText?.attributedSubstring(from: NSRange(0..<diff.idx)) ?? NSMutableAttributedString()
+                //print("afterbefore")
+                let add = attributedString.attributedSubstring(from: NSRange(location: diff.idx, length: 1))
+                //print("afteradd")
+                var afterAdd = NSAttributedString()
+                if diff.idx < super.attributedText?.length ?? 0 {
+                    print(diff.idx)
+                    print(super.attributedText?.length)
+                    afterAdd = super.attributedText?.attributedSubstring(from: NSRange(diff.idx..<super.attributedText!.length)) ?? NSMutableAttributedString()
+                    //print("after")
+                }
+                
+                // addition
+                let newAttributed = NSMutableAttributedString.init(attributedString: beforeAdd)
+                newAttributed.append(add)
+                newAttributed.append(afterAdd)
+                super.attributedText = newAttributed
+                //print("resetting via add\n\(newAttributed.string)")
+            } else {
+                let beforeSub = super.attributedText?.attributedSubstring(from: NSRange(0..<diff.idx)) ?? NSMutableAttributedString()
+                //print("afterbefore")
+                var afterSub = NSAttributedString()
+                if diff.idx+1 < super.attributedText?.length ?? 0 {
+                    //print(diff.idx+1)
+                    //print(super.attributedText?.length)
+                    afterSub = super.attributedText?.attributedSubstring(from: NSRange(diff.idx+1..<super.attributedText!.length)) ?? NSMutableAttributedString()
+                    //print("after sub")
+                }
+                
+                // subtraction
+                let newAttributed = NSMutableAttributedString.init(attributedString: beforeSub)
+                newAttributed.append(afterSub)
+                super.attributedText = newAttributed
+                //print("resetting via sub\n\(newAttributed.string)")
+            }
+           // print("\n")
+            
+            //print(super.attributedText?.string ?? "")
+            //print(attributedString.string)
+            
+            let diffs = Dwifft.diff(Array(super.attributedText?.string ?? ""), Array(attributedString.string)).sorted(by: { (dif1, dif2) -> Bool in
+                return dif1.idx < dif2.idx
+            })
+            print("diffs")
+            
+            self.dispatchSerialQ.asyncAfter(deadline: .now() + self.charInterval) { [weak self] in
+                self?.setTextWithTypingAnimation(attributedString, length: length + 1, diffs: diffs)
+            }
         }
     }
 }

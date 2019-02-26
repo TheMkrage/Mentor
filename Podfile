@@ -14,4 +14,5 @@ target 'Mentor' do
   pod 'Anchorage'
   pod 'DragDropiOS'
   pod 'Dwifft'
+  pod 'Alamofire'
 end
